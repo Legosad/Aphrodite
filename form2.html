@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Select the Traits You Seek in a Match</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <!-- css -->
+    <link rel="stylesheet" href="./form2-style.css">
+    <!-- <link rel="stylesheet" href="./assets/fonts/stylesheet.css"> -->
+    <!-- slider-cdn-css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+</head> 
+
+<body>
+    <div class="main-content">
+        <header class="main-header">
+            <div class="container">
+                <div class="header-wrap">
+                    <a href="#" class="logo-block">
+                        <img src="Aphrodite 2D-03.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrap">
+            <section class="profile-section">
+                <div class="container">
+                    <div class="profile-wrapper">
+                        <h1>Traits I want</h1>
+                        <p>Please make sure you rank the trait via the drop-down menu!</p>
+                        <div class="forn-wrap">
+                            <form class="profile-form">
+                                <div class="personal-detail">
+                                    <label aria-label="Screen Name" for="screen-name">Screen Name : </label>
+
+                                    <input type="text" id="screen-name" name="screen-name"
+                                        placeholder="Enter Your Name.." required>
+                                </div>
+
+                                <h2>I Want:</h2>
+
+                                <div class="form-box">
+                                    <h3>Sex (Choose one)</h3>
+                                    <div class="selection-wrap">
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" value="Male" id="Male"
+                                                name="desired-sex">
+                                            <label aria-label="Male" for="Male">Male</label>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" value="Female" id="Female"
+                                                name="desired-sex">
+                                            <label aria-label="Female" for="Female">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-box">
+
+                                    <h3>Social Habits (Choose one per row)</h3>
+
+                                    <div class="selection-wrap">
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="Smoker" class="radio-class" name="smoker"
+                                                onchange="showDropdown('SmokerValue', 'Smoker')">
+                                            <label aria-label="Smoker" for="Smoker">Smoker</label>
+                                            <select id="SmokerValue" name="smoker-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="Non-Smoker" class="radio-class" name="smoker"
+                                                onchange="showDropdown('NonSmokerValue', 'Non-Smoker')">
+                                            <label aria-label="Non-Smoker" for="Non-Smoker">Non-Smoker </label>
+                                            <select id="NonSmokerValue" name="nonsmoker-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="Vape" class="radio-class" name="smoker"
+                                                onchange="showDropdown('VapeValue', 'Vape')">
+                                            <label aria-label="Vape" for="Vape">Vape</label>
+                                            <select id="VapeValue" name="vape-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="Drinker" class="radio-class" name="radio-group2"
+                                                onchange="showDropdown('DrinkerValue', 'Drinker')">
+                                            <label aria-label="Drinker" for="Drinker">Drinker</label>
+                                            <select id="DrinkerValue" name="drinker-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="SocialDrinker" class="radio-class"
+                                                name="radio-group2"
+                                                onchange="showDropdown('SocialDrinkerValue', 'SocialDrinker')">
+                                            <label aria-label="Social Drinker" for="SocialDrinker">Social
+                                                Drinker</label>
+                                            <select id="SocialDrinkerValue" name="socialdrinker-value"
+                                                style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="NonDrinker" class="radio-class" name="radio-group2"
+                                                onchange="showDropdown('NonDrinkerValue', 'NonDrinker')">
+                                            <label aria-label="NonDrinker" for="NonDrinker">Non-Drinker</label>
+                                            <select id="NonDrinkerValue" name="nondrinker-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" id="Vegan" class="radio-class" name="radio-group3"
+                                                onchange="showDropdown('VeganValue', 'Vegan')">
+                                            <label aria-label="Vegan" for="Vegan">Vegan</label>
+                                            <select id="VeganValue" name="vegan-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" id="Vegetarian" name="radio-group3"
+                                                onchange="showDropdown('VegetarianValue', 'Vegetarian')">
+                                            <label aria-label="Vegetarian" for="Vegetarian">Vegetarian</label>
+                                            <select id="VegetarianValue" name="vegetarian-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" id="HealthyLifestyle"
+                                                name="radio-group3"
+                                                onchange="showDropdown('HealthyLifestyleValue', 'HealthyLifestyle')">
+                                            <label aria-label="HealthyLifestyle" for="HealthyLifestyle">Healthy
+                                                Lifestyle</label>
+                                            <select id="HealthyLifestyleValue" name="healthylifestyle-value"
+                                                style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" id="Liberal" name="radio-group4"
+                                                onchange="showDropdown('LiberalValue', 'Liberal')">
+                                            <label aria-label="Liberal" for="Liberal">Liberal</label>
+                                            <select id="LiberalValue" name="liberal-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" id="Moderate" name="radio-group4"
+                                                onchange="showDropdown('ModerateValue', 'Moderate')">
+                                            <label aria-label="Moderate" for="Moderate">Moderate</label>
+                                            <select id="ModerateValue" name="moderate-value" style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="checkcontainer">
+                                            <input type="radio" class="radio-class" id="Conservative"
+                                                name="radio-group4"
+                                                onchange="showDropdown('ConservativeValue', 'Conservative')">
+                                            <label aria-label="Conservative" for="Conservative">Conservative</label>
+                                            <select id="ConservativeValue" name="conservative-value"
+                                                style="display: none;">
+                                                <option value="must">Must Have this Trait</option>
+                                                <option value="prefer">Prefer to have this Trait</option>
+                                                <option value="cannot">Cannot Have this Trait</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Physical (Choose all that apply)</h3>
+
+                                            <div class="checkcontainer">
+                                                <input type="checkbox" class="radio-class" id="GreatSmile"
+                                                    name="great-smile"
+                                                    onchange="showDropdown('GreatSmileValue', 'GreatSmile')">
+                                                <label aria-label="greatsmile" for="GreatSmile">Great Smile</label>
+                                                <select id="GreatSmileValue" name="greatsmile-value"
+                                                    style="display: none;">
+                                                    <option value="must">Must Have this Trait</option>
+                                                    <option value="prefer">Prefer to have this Trait</option>
+                                                    <option value="cannot">Cannot Have this Trait</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="checkcontainer">
+                                                <input type="checkbox" class="radio-class" id="GreatEyes"
+                                                    name="great-eyes"
+                                                    onchange="showDropdown('GreatEyesValue', 'GreatEyes')">
+                                                <label aria-label="greateyes" for="GreatEyes">Great Eyes</label>
+                                                <select id="GreatEyesValue" name="greateyes-value"
+                                                    style="display: none;">
+                                                    <option value="must">Must Have this Trait</option>
+                                                    <option value="prefer">Prefer to have this Trait</option>
+                                                    <option value="cannot">Cannot Have this Trait</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="checkcontainer">
+                                                <input type="checkbox" class="radio-class" id="Athletic" name="athletic"
+                                                    onchange="showDropdown('AthleticValue', 'Athletic')">
+                                                <label aria-label="athletic" for="Athletic">Athletic</label>
+                                                <select id="AthleticValue" name="athletic-value" style="display: none;">
+                                                    <option value="must">Must Have this Trait</option>
+                                                    <option value="prefer">Prefer to have this Trait</option>
+                                                    <option value="cannot">Cannot Have this Trait</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="checkcontainer">
+                                                <input type="checkbox" class="radio-class" id="Tall" name="tall"
+                                                    onchange="showDropdown('TallValue', 'Tall')">
+                                                <label aria-label="tall" for="Tall">Tall</label>
+                                                <select id="TallValue" name="tall-value" style="display: none;">
+                                                    <option value="must">Must Have this Trait</option>
+                                                    <option value="prefer">Prefer to have this Trait</option>
+                                                    <option value="cannot">Cannot Have this Trait</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Short" for="Short" class="check-label">
+
+                                                    <input id="Short" name="Short" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Short</span>
+
+
+                                                </label>
+
+                                                <label aria-label="Blonde" for="Blonde" class="check-label">
+
+                                                    <input id="Blonde" name="Blonde" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Blonde</span>
+
+
+                                                </label>
+
+                                                <label aria-label="Redhead" for="Redhead" class="check-label">
+
+                                                    <input id="Redhead" name="Redhead" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Redhead</span>
+
+
+                                                </label>
+
+                                                <label aria-label="Beard/Facial Hair" for="Beard/Facial Hair"
+                                                    class="check-label">
+                                                    <input id="Beard/Facial Hair" name="Beard/Facial Hair"
+                                                        type="checkbox" onchange = "getPhysicalTraits(event)" value="yes" class="check-class">
+                                                    <span>Beard/Facial Hair</span>
+
+                                                </label>
+
+                                                <label aria-label="Grey Hair" for="Grey Hair" class="check-label">
+
+                                                    <input id="Grey Hair" name="Grey Hair" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Grey Hair</span>
+
+
+                                                </label>
+
+                                                <label aria-label="African-American" for="African-American"
+                                                    class="check-label">
+
+                                                    <input id="African-American" name="African-American" type="checkbox" onchange = "getPhysicalTraits(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>African-American</span>
+
+
+                                                </label>
+
+                                                <label aria-label="European" for="European" class="check-label">
+
+                                                    <input id="European" name="European" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>European</span>
+
+
+                                                </label>
+
+                                                <label aria-label="Indian" for="Indian" class="check-label">
+
+                                                    <input id="Indian" name="Indian" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Indian</span>
+
+
+                                                </label>
+
+                                                <label aria-label="Thin" for="Thin" class="check-label">
+
+                                                    <input id="Thin" name="Thin" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Thin</span>
+
+
+                                                </label>
+
+                                                <label aria-label="HWP" for="HWP" class="check-label">
+
+                                                    <input id="HWP" name="HWP" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>HWP</span>
+
+
+                                                </label>
+
+                                                <label aria-label="A few extra pounds/Curvy"
+                                                    for="A few extra pounds/Curvy" class="check-label">
+                                                    <input id="A few extra pounds/Curvy" name="A few extra pounds/Curvy"
+                                                        type="checkbox" onchange = "getPhysicalTraits(event)" value="yes" class="check-class">
+                                                    <span>A few extra pounds/Curvy</span>
+
+                                                </label>
+
+                                                <label aria-label="Heavy/Overweight" for="Heavy/Overweight"
+                                                    class="check-label">
+                                                    <input id="Heavy/Overweight" name="Heavy/Overweight" type="checkbox" onchange = "getPhysicalTraits(event)"
+                                                        value="yes" class="check-class">
+                                                    <span>Heavy/Overweight</span>
+
+                                                </label>
+
+                                                <label aria-label="Athletic/Fit/Muscular" for="Athletic/Fit/Muscular"
+                                                    class="check-label">
+                                                    <input id="Athletic/Fit/Muscular" name="Athletic/Fit/Muscular"
+                                                        type="checkbox" onchange = "getPhysicalTraits(event)" value="yes" class="check-class">
+                                                    <span>Athletic/Fit/Muscular</span>
+
+                                                </label>
+
+                                                <label aria-label="Brunette" for="Brunette" class="check-label">
+                                                    <input id="Brunette" name="Brunette" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Brunette</span>
+
+                                                </label>
+
+                                                <label aria-label="Bald" for="Bald" class="check-label">
+                                                    <input id="Bald" name="Bald" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Bald</span>
+
+                                                </label>
+
+                                                <label aria-label="Long Hair" for="Long Hair" class="check-label">
+                                                    <input id="Long Hair" name="Long Hair" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Long Hair</span>
+
+                                                </label>
+
+                                                <label aria-label="Caucasian" for="Caucasian" class="check-label">
+                                                    <input id="Caucasian" name="Caucasian" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Caucasian</span>
+
+                                                </label>
+
+                                                <label aria-label="Asian" for="Asian" class="check-label">
+                                                    <input id="Asian" name="Asian" type="checkbox" onchange = "getPhysicalTraits(event)" class="check-class"
+                                                        value="yes">
+                                                    <span>Asian</span>
+
+                                                </label>
+
+                                                <label aria-label="Native American" for="Native American"
+                                                    class="check-label">
+                                                    <input id="Native American" name="Native American" type="checkbox" onchange = "getPhysicalTraits(event)"
+                                                        value="yes" class="check-class">
+                                                    <span>Native American</span>
+
+                                                </label>
+
+                                                <label aria-label="Latin" for="Latin" class="check-label">
+                                                    <input id="Latin" name="Latin" type="checkbox" onchange = "getPhysicalTraits(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Latin</span>
+
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Beliefs</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Christian" for="Christian" class="check-label">
+
+                                                    <input id="Christian" name="Christian" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Christian</span>
+
+                                                </label>
+
+                                                <label aria-label="Jewish" for="Jewish" class="check-label">
+
+                                                    <input id="Jewish" name="Jewish" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Jewish</span>
+
+                                                </label>
+
+                                                <label aria-label="Mormon" for="Mormon" class="check-label">
+
+                                                    <input id="Mormon" name="Mormon" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Mormon</span>
+
+                                                </label>
+
+                                                <label aria-label="Muslim" for="Muslim" class="check-label">
+
+                                                    <input id="Muslim" name="Muslim" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Muslim</span>
+
+                                                </label>
+
+                                                <label aria-label="Catholic" for="Catholic" class="check-label">
+
+                                                    <input id="Catholic" name="Catholic" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Catholic</span>
+
+                                                </label>
+
+                                                <label aria-label="Atheist" for="Atheist" class="check-label">
+
+                                                    <input id="Atheist" name="Atheist" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Atheist</span>
+
+                                                </label>
+
+                                                <label aria-label="Non- Religious" for="Non- Religious"
+                                                    class="check-label">
+
+                                                    <input id="Non- Religious" name="Non- Religious" type="checkbox" onchange = "getBeliefs(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Non-Religious</span>
+
+                                                </label>
+
+                                                <label aria-label="Buddhist" for="Buddhist" class="check-label">
+
+                                                    <input id="Buddhist" name="Buddhist" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Buddhist</span>
+
+                                                </label>
+
+                                                <label aria-label="Protestant" for="Protestant" class="check-label">
+
+                                                    <input id="Protestant" name="Protestant" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Protestant</span>
+
+                                                </label>
+
+                                                <label aria-label="Methodist" for="Methodist" class="check-label">
+
+                                                    <input id="Methodist" name="Methodist" type="checkbox" onchange = "getBeliefs(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Methodist</span>
+
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Hobbies (Choose all that apply)</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Camping/outdoors" for="Camping/outdoors"
+                                                    class="check-label">
+
+                                                    <input id="Camping/outdoors" name="Camping/outdoors" type="checkbox" onchange = "getHobbies(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Camping/outdoors</span>
+
+                                                </label>
+
+                                                <label aria-label="Travel" for="Travel" class="check-label">
+
+                                                    <input id="Travel" name="Travel" type="checkbox" onchange = "getHobbies(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Travel</span>
+
+                                                </label>
+
+                                                <label aria-label="Cooking" for="Cooking" class="check-label">
+
+                                                    <input id="Cooking" name="Cooking" type="checkbox" onchange = "getHobbies(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Cooking</span>
+
+                                                </label>
+
+                                                <label aria-label="Dancing/Art" for="Dancing/Art">
+
+                                                    <input id="Dancing/Art" name="Dancing/Art" type="checkbox" onchange = "getHobbies(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Dancing/Art</span>
+
+                                                </label>
+
+                                                <label aria-label="Photography" for="Photography" class="check-label">
+
+                                                    <input id="Photography" name="Photography" type="checkbox" onchange = "getHobbies(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Photography</span>
+
+                                                </label>
+
+                                                <label aria-label="Working Out/Gym/Yoga" for="Working Out/Gym/Yoga"
+                                                    class="check-label">
+
+                                                    <input id="Working Out/Gym/Yoga" name="Working Out/Gym/Yoga"
+                                                        type="checkbox" onchange = "getHobbies(event)" value="yes" class="check-class">
+
+                                                    <span>Working Out/Gym/Yoga</span>
+
+                                                </label>
+
+                                                <label aria-label="Movies" for="Movies" class="check-label">
+
+                                                    <input id="Movies" name="Movies" type="checkbox" onchange = "getHobbies(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Movies</span>
+
+                                                </label>
+
+                                                <label aria-label="Sports" for="Sports" class="check-label">
+
+                                                    <input id="Sports" name="Sports" type="checkbox" onchange = "getHobbies(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Sports</span>
+
+                                                </label>
+
+                                                <label aria-label="Hunting" for="Hunting">
+
+                                                    <input id="Hunting" name="Hunting" type="checkbox" onchange = "getHobbies(event)" value="yes">
+
+                                                    <span>Hunting</span>
+
+                                                </label>
+
+                                                <label aria-label="Gardening/Working Outdoors"
+                                                    for="Gardening/Working Outdoors" class="check-label">
+
+                                                    <input id="Gardening/Working Outdoors"
+                                                        name="Gardening/Working Outdoors" type="checkbox" onchange = "getHobbies(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Gardening/Working Outdoors</span>
+
+                                                </label>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Personality (Choose all that apply)</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Motivated/Driven" for="Motivated/Driven"
+                                                    class="check-label">
+
+                                                    <input id="Motivated/Driven" name="Motivated/Driven" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Motivated/Driven</span>
+
+                                                </label>
+
+                                                <label aria-label="Generous" for="Generous" class="check-label">
+
+                                                    <input id="Generous" name="Generous" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Generous</span>
+
+                                                </label>
+
+                                                <label aria-label="Creative/quirky" for="Creative/quirky"
+                                                    class="check-label">
+
+                                                    <input id=" Creative/quirky" name="Creative/quirky" type="checkbox" onchange = "getPersonalities(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Creative/quirky</span>
+
+                                                </label>
+
+                                                <label aria-label="Family-oriented" for="Family-oriented"
+                                                    class="check-label">
+
+                                                    <input id="Family-oriented" name="Family-oriented" type="checkbox" onchange = "getPersonalities(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Family-oriented</span>
+
+                                                </label>
+
+                                                <label aria-label="Great Sense of humor" for="Great Sense of humor"
+                                                    class="check-label">
+
+                                                    <input id="Great Sense of humor" name="Great Sense of humor"
+                                                        type="checkbox" onchange = "getPersonalities(event)" class="check-class" value="yes">
+
+                                                    <span>Great Sense of humor</span>
+
+                                                </label>
+
+                                                <label aria-label="Extroverted" for="Extroverted" class="check-label">
+
+                                                    <input id="Extroverted" name="Extroverted" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Extroverted</span>
+
+                                                </label>
+
+                                                <label aria-label="Introverted" for="Introverted" class="check-label">
+
+                                                    <input id="Introverted" name="Introverted" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-label">
+
+                                                    <span>Introverted</span>
+
+                                                </label>
+
+                                                <label aria-label="Kind" for="Kind" class="check-label">
+
+                                                    <input id="Kind" name="Kind" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Kind</span>
+
+                                                </label>
+
+                                                <label aria-label="Patient/Understanding" for="Patient/Understanding"
+                                                    class="check-label">
+
+                                                    <input id="Patient/Understanding" name="Patient/Understanding"
+                                                        class="check-class" type="checkbox" onchange = "getPersonalities(event)" value="yes">
+
+                                                    <span>Patient/Understanding</span>
+
+                                                </label>
+
+                                                <label aria-label="Wild/Fun" for="Wild/Fun" class="check-label">
+
+                                                    <input id="Wild/Fun" name="Wild/Fun" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Wild/Fun</span>
+
+                                                </label>
+
+                                                <label aria-label="Loyal" for="Loyal" class="check-label">
+
+                                                    <input id="Loyal" name="Loyal" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Loyal</span>
+
+                                                </label>
+
+                                                <label aria-label="Open-Minded" for="Open-Minded" class="check-label">
+
+                                                    <input id=" Open-Minded" name="Open-Minded" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Open-Minded </span>
+
+                                                </label>
+
+                                                <label aria-label="Friendly/Warm" for="Friendly/Warm"
+                                                    class="check-label">
+
+                                                    <input id="Friendly/Warm" name="Friendly/Warm" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Friendly/Warm</span>
+
+                                                </label>
+
+                                                <label aria-label="Optimistic" for="Optimistic" class="check-label">
+
+                                                    <input id="Optimistic" name="Optimistic" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Optimistic</span>
+
+                                                </label>
+
+                                                <label aria-label="Shy/Awkward" for="Shy/Awkward" class="check-label">
+
+                                                    <input id="Shy/Awkward" name="Shy/Awkward" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Shy/Awkward</span>
+
+                                                </label>
+
+                                                <label aria-label="Great heart" for="Great heart" class="check-label">
+
+                                                    <input id="Great heart" name="Great heart" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Great heart</span>
+
+                                                </label>
+
+                                                <label aria-label="Romantic/thoughtful" for="Romantic/thoughtful"
+                                                    class="check-label">
+
+                                                    <input id="Romantic/thoughtful" name="Romantic/thoughtful"
+                                                        type="checkbox" onchange = "getPersonalities(event)" class="check-class" value="yes">
+
+                                                    <span>Romantic/thoughtful</span>
+
+                                                </label>
+
+                                                <label aria-label="Loves Animals" for="Loves Animals"
+                                                    class="check-label">
+
+                                                    <input id="Loves Animals" name="Loves Animals" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Loves Animals</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Intelligent" for="Intelligent" class="check-label">
+
+                                                    <input id="Intelligent" name="Intelligent" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Intelligent</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Calm" for="Calm" class="check-label">
+
+                                                    <input id="Calm" name="Calm" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class" class="check-class">
+
+                                                    <span>Calm</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Confident" for="Confident" class="check-label">
+
+                                                    <input id="Confident" name="Confident" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Confident</span>
+
+                                                </label>
+
+                                                <label aria-label="Loving" for="Loving" class="check-label">
+
+                                                    <input id="Loving" name="Loving" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Loving</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Sarcastic/Playful/Witty"
+                                                    for="Sarcastic/Playful/Witty" class="check-label">
+
+                                                    <input id="Sarcastic/Playful/Witty" name="Sarcastic/Playful/Witty"
+                                                        class="check-class" type="checkbox" onchange = "getPersonalities(event)" value="yes">
+
+                                                    <span>Sarcastic/Playful/Witty</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Trustworthy" for="Trustworthy" class="check-label">
+
+                                                    <input id="Trustworthy" name="Trustworthy" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Trustworthy</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Dependable" for="Dependable" class="check-label">
+
+                                                    <input id="Dependable" name="Dependable" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Dependable</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Honest" for="Honest" class="check-label">
+
+                                                    <input id="Honest" name="Honest" type="checkbox" onchange = "getPersonalities(event)" value="yes"
+                                                        class="check-class">
+
+                                                    <span>Honest</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Affectionate" for="Affectionate" class="check-label">
+
+                                                    <input id="Affectionate" name="Affectionate" type="checkbox" onchange = "getPersonalities(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Affectionate</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Strong/Resilient" for="Strong/Resilient"
+                                                    class="check-label">
+
+                                                    <input id="Strong/Resilient" name="Strong/Resilient" type="checkbox" onchange = "getPersonalities(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Strong/Resilient</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Spunky/Energetic" for="Spunky/Energetic"
+                                                    class="check-label">
+
+                                                    <input id="Spunky/Energetic" name="Spunky/Energetic" type="checkbox" onchange = "getPersonalities(event)"
+                                                        class="check-class" class="check-class" value="yes">
+
+                                                    <span>Spunky/Energetic</span>
+
+                                                </label>
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Children (Choose all that apply)</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Has Children" for="Has Children" class="check-label">
+
+                                                    <input id="Has Children" name="Has Children" type="checkbox" onchange = "getChildren(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Has Children</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Wants Children" for="Wants Children"
+                                                    class="check-label">
+
+                                                    <input id="Wants Children" name="Wants Children" type="checkbox" onchange = "getChildren(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>Wants Children</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Does not want children" for="Does not want children"
+                                                    class="check-label">
+
+                                                    <input id="Does not want children" name="Does not want children"
+                                                        class="check-class" type="checkbox" onchange = "getChildren(event)" value="yes">
+
+                                                    <span>Does not want children</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Does not have children" for="Does not have children"
+                                                    class="check-label">
+
+                                                    <input id="Does not have children" name="Does not have children"
+                                                        class="check-class" type="checkbox" onchange = "getChildren(event)" value="yes">
+
+                                                    <span>Does not have children</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Open to Having Children"
+                                                    for="Open to Having Children" class="check-label">
+
+                                                    <input id="Open to Having Children" name="Open to Having Children"
+                                                        class="check-class" type="checkbox" onchange = "getChildren(event)" value="yes">
+
+                                                    <span>Open to Having Children</span>
+
+                                                </label>
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Desired Relationship (Choose all that
+
+                                                apply)</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="Long-Term Relationship/Marriage"
+                                                    for="Long-Term Relationship/Marriage" class="check-label">
+
+                                                    <input id="Long-Term Relationship/Marriage"
+                                                        name="Long-Term Relationship/Marriage" type="checkbox" onchange = "getRelationship(event)"
+                                                        value="yes" class="check-class">
+
+                                                    <span>Long-Term Relationship/Marriage</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Travel Partner/Fun" for="Travel Partner/Fun"
+                                                    class="check-label">
+
+                                                    <input id="Travel Partner/Fun" name="Travel Partner/Fun"
+                                                        type="checkbox" onchange = "getRelationship(event)" class="check-class" value="yes">
+
+                                                    <span>Travel Partner/Fun</span>
+
+                                                </label>
+
+
+
+                                                <label aria-label="Casual Relationship" for="Casual Relationship"
+                                                    class="check-label">
+
+                                                    <input id="Casual Relationship" name="Casual Relationship"
+                                                        type="checkbox" onchange = "getRelationship(event)" class="check-class" value="yes">
+
+                                                    <span>Casual Relationship</span>
+
+                                                </label>
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="form-box">
+
+                                            <h3>Lifestyle (Choose all that apply)</h3>
+
+                                            <div class="multi-select">
+
+                                                <label aria-label="I am surviving" for="I am surviving"
+                                                    class="check-label">
+
+                                                    <input id="I am surviving" name="I am surviving" type="checkbox" onchange = "getLifestyle(event)"
+                                                        class="check-class" value="yes">
+
+                                                    <span>I am surviving</span>
+
+                                                </label>
+
+                                                <label aria-label="" for="Comfortable" class="check-label">
+                                                    <input id="Comfortable" name="Comfortable" type="checkbox" onchange = "getLifestyle(event)"
+                                                        value="yes" class="check-class">
+                                                    <span>Comfortable</span>
+                                                </label>
+
+                                                <label aria-label="Wealthy/Extravagant" for="Wealthy/Extravagant"
+                                                    class="check-label">
+                                                    <input id="Wealthy/Extravagant" name="Wealthy/Extravagant"
+                                                        type="checkbox" onchange = "getLifestyle(event)" class="check-class" value="yes">
+                                                    <span>Wealthy/Extravagant</span>
+                                                </label>
+
+                                                <label aria-label="Willing to relocate" for="Willing to relocate"
+                                                    class="check-label">
+                                                    <input id="Willing to relocate" name="Willing to relocate"
+                                                        type="checkbox" onchange = "getLifestyle(event)" class="check-class" value="yes">
+                                                    <span>Willing to relocate</span>
+                                                </label>
+
+                                                <label aria-label="Life is Good" for="Life is Good" class="check-label">
+                                                    <input id="Life is Good" name="Life is Good" type="checkbox" onchange = "getLifestyle(event)"
+                                                        value="yes" class="check-class">
+                                                    <span>Life is Good</span>
+                                                </label>
+
+                                                <label aria-label="Financially Stable" for="Financially Stable"
+                                                    class="check-label">
+                                                    <input id="Financially Stable" name="Financially Stable"
+                                                        type="checkbox" onchange = "getLifestyle(event)" class="check-class" value="yes">
+                                                    <span>Financially Stable</span>
+                                                </label>
+
+                                                <label aria-label="Crazy Rich" for="Crazy Rich" class="check-label">
+                                                    <input id="Crazy Rich" name="Crazy Rich" type="checkbox" onchange = "getLifestyle(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>Crazy Rich</span>
+                                                </label>
+
+
+
+                                                <label aria-label="Will NOT relocate" for="Will NOT relocate"
+                                                    class="check-label">
+
+                                                    <input id="Will NOT relocate" name="Will NOT relocate"
+                                                        type="checkbox" onchange = "getLifestyle(event)" class="check-class" value="yes">
+
+                                                    <span>Will NOT relocate</span>
+
+                                                </label>
+
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="personal-detail age form-box">
+                                            <h3>Age (Choose all that apply)</h3>
+                                            <div class="multi-select">
+                                                <label aria-label="age20-30" for="20-30" class="check-label">
+                                                    <input id="20-30" name="" type="checkbox" onchange = "getAge(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>20-30</span>
+                                                </label>
+
+                                                <label aria-label="age30-40" for="30-40" class="check-label">
+
+                                                    <input id="30-40" name="" type="checkbox" onchange="getAge(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>30-40</span>
+                                                </label>
+
+                                                <label aria-label="age40-50" for="40-50" class="check-label">
+                                                    <input id="40-50" name="" type="checkbox" onchange="getAge(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>40-50</span>
+                                                </label>
+
+                                                <label aria-label="age60 +" for="60 +" class="check-label">
+
+                                                    <input id="60 +" name="" type="checkbox" onchange="getAge(event)" value="yes"
+                                                        class="check-class">
+                                                    <span>60 +</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input type="submit" value="Submit" class="submit"
+                                            onclick="submitDesiredTraits(event)">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer></footer>
+    </div>
+
+
+
+    <!-- Add jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <script src="form2-script.js"></script>
+
+</body>
+
+
+
+</html>
